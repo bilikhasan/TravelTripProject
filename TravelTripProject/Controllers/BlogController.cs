@@ -5,17 +5,17 @@ using System.Web;
 using System.Web.Mvc;
 using TravelTripProject.Models.Sınıflar;
 
+
 namespace TravelTripProject.Controllers
 {
-    public class AboutController : Controller
+    public class BlogController : Controller
     {
-        // GET: About
+        // GET: Blog
         Context c = new Context();
-
         public ActionResult Index()
         {
-            var degerler = c.Hakkimizdas.ToList();
-            return View(degerler);
+            var bloglar = c.Blogs.ToList();
+            return View(bloglar);
         }
     }
 }
